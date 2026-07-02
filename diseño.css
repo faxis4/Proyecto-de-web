@@ -275,31 +275,39 @@ footer p:last-child {
   object-fit: cover;
 }
 
-/* Columna derecha: subtítulo, descripción y botón */
+/* Columna derecha: tarjeta con subtítulo, descripción y botón */
 .landing main {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 20px;
-  padding: 24px 16px;
+  gap: 24px;
+  padding: 32px 24px;
   background: #232436;
   border-radius: 28px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
 }
 
-.landing main footer p {
-  font-size: 0.8rem;
-  color: #9D7BFF;
-  margin: 0;
-  font-weight: 700;
+/* Slogan arriba de todo */
+.landing main footer {
+  order: -1;
 }
 
+.landing main footer p {
+  font-size: 0.75rem;
+  color: #C9C7D6;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Descripción principal */
 .landing main > p {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: #F4F2ED;
   margin: 0;
   line-height: 1.6;
+  max-width: 280px;
 }
 
 /* Botón "Comenzar ahora" */
@@ -307,8 +315,8 @@ footer p:last-child {
   border: none;
   border-radius: 999px;
   font-weight: 700;
-  font-size: 1rem;
-  padding: 14px 36px;
+  font-size: 1.05rem;
+  padding: 16px 40px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
@@ -321,19 +329,7 @@ footer p:last-child {
 
 .btn-comenzar:hover {
   background: #b89eff;
-  transform: scale(1.03);
-}
-
-/* Pie de página (columna derecha, debajo de main) */
-.landing footer {
-  text-align: center;
-  padding: 0;
-}
-
-.landing footer p {
-  font-size: 0.75rem;
-  color: #C9C7D6;
-  margin: 0;
+  transform: scale(1.04);
 }
 
 /* En pantallas chicas, apilar verticalmente */
