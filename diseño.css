@@ -235,14 +235,19 @@ footer p:last-child {
 
 /* ── Landing page (Principal.html) ── */
 
-/* Encabezado con la imagen del gato */
-header .contenedor {
+/* Contenedor principal de la landing, envuelve los elementos semánticos */
+.landing {
   width: 100%;
   max-width: 480px;
-  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 24px;
+}
+
+/* Encabezado con la imagen del gato y título superpuesto */
+.landing header {
+  width: 100%;
 }
 
 .imagen-de-gato {
@@ -260,6 +265,7 @@ header .contenedor {
   object-fit: cover;
 }
 
+/* Texto superpuesto sobre la imagen */
 .Gato-texto {
   position: absolute;
   inset: 0;
@@ -269,7 +275,6 @@ header .contenedor {
   align-items: center;
   padding: 32px 24px;
   text-align: center;
-  gap: 12px;
 }
 
 .Gato-texto h1 {
@@ -278,26 +283,24 @@ header .contenedor {
   margin: 0;
 }
 
-/* Sección principal con la descripción y el botón */
-main .contenedor {
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
+/* Sección principal: descripción y botón */
+.landing main {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 24px 16px;
   gap: 16px;
+  padding: 8px 16px;
 }
 
-main .contenedor p {
+.landing main p {
   font-size: 0.95rem;
   color: #C9C7D6;
   margin: 0;
   max-width: 320px;
 }
 
+/* Botón "Comenzar ahora" */
 .Gato-btn {
   border: none;
   border-radius: 999px;
@@ -305,7 +308,6 @@ main .contenedor p {
   font-size: 1rem;
   padding: 14px 36px;
   cursor: pointer;
-  margin-top: 8px;
   text-decoration: none;
   display: inline-block;
 }
@@ -321,17 +323,12 @@ main .contenedor p {
 }
 
 /* Pie de página */
-footer .contenedor {
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;
+.landing footer {
+  text-align: center;
+  padding: 8px 16px;
 }
 
-footer .contenedor p {
+.landing footer p {
   font-size: 0.75rem;
   color: #C9C7D6;
   margin: 0;
