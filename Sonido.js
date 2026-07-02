@@ -2,7 +2,7 @@
 const SonidoApp = {
   // Datos del idioma español: letras, números y palabras con su pronunciación
   español: {
-    speechLang: "español-ES",
+    idiomaVoz: "español-ES",
 
     // Letras del abecedario en español
     letras: [
@@ -42,7 +42,7 @@ const SonidoApp = {
 
   // Datos del idioma inglés: letras, números y palabras con su pronunciación
   ingles: {
-    speechLang: "english-US",
+    idiomaVoz: "english-US",
 
     // Letras del alfabeto en inglés
     letras: [
@@ -82,7 +82,7 @@ const SonidoApp = {
 
   // Datos del idioma coreano: letras, números y palabras con su pronunciación
   coreano: {
-    speechLang: "coreano-KR",
+    idiomaVoz: "coreano-KR",
 
     // Letras del alfabeto hangul
     letras: [
