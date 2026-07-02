@@ -1,8 +1,10 @@
 // Declaración de los datos de la aplicación web Mspotify para los idiomas español, inglés y coreano
 const SonidoApp = {
+  // Datos del idioma español: letras, números y palabras con su pronunciación
   español: {
     speechLang: "español-ES",
 
+    // Letras del abecedario en español
     letras: [
       { simbolo: "A", decir: "A" }, { simbolo: "B", decir: "Be" },
       { simbolo: "C", decir: "Ce" }, { simbolo: "D", decir: "De" },
@@ -12,6 +14,7 @@ const SonidoApp = {
       { simbolo: "S", decir: "Ese" }, { simbolo: "U", decir: "U" }
     ],
 
+    // Números del 1 al 10 en español
     numeros: [
       { simbolo: "1", decir: "uno" }, { simbolo: "2", decir: "dos" },
       { simbolo: "3", decir: "tres" }, { simbolo: "4", decir : "cuatro" },
@@ -20,6 +23,7 @@ const SonidoApp = {
       { simbolo: "9", decir: "nueve" }, { simbolo: "10", decir: "diez" }
     ],
 
+    // Palabras comunes en español
     palabras: [
       { simbolo: "Gato", decir: "gato" },
       { simbolo: "Perro", decir: "perro" },
@@ -36,9 +40,11 @@ const SonidoApp = {
     ]
   },
 
+  // Datos del idioma inglés: letras, números y palabras con su pronunciación
   ingles: {
     speechLang: "english-US",
 
+    // Letras del alfabeto en inglés
     letras: [
       { simbolo: "A", decir: "A" }, { simbolo: "B", decir: "B" },
       { simbolo: "C", decir: "C" }, { simbolo: "D", decir: "D" },
@@ -48,6 +54,7 @@ const SonidoApp = {
       { simbolo: "S", decir: "S" }, { simbolo: "U", decir: "U" }
     ],
 
+    // Números del 1 al 10 en inglés
     numeros: [
       { simbolo: "1", decir: "one" }, { simbolo: "2", decir: "two" },
       { simbolo: "3", decir: "three" }, { simbolo: "4", decir: "four" },
@@ -56,6 +63,7 @@ const SonidoApp = {
       { simbolo: "9", decir: "nine" }, { simbolo: "10", decir: "ten" }
     ],
 
+    // Palabras comunes en inglés
     palabras: [
       { simbolo: "Cat", decir: "cat" },
       { simbolo: "Dog", decir: "dog" },
@@ -72,9 +80,11 @@ const SonidoApp = {
     ]
   },
 
+  // Datos del idioma coreano: letras, números y palabras con su pronunciación
   coreano: {
     speechLang: "coreano-KR",
 
+    // Letras del alfabeto hangul
     letras: [
       { simbolo: "ㄱ", decir: "기역" }, { simbolo: "ㄴ", decir: "니은" },
       { simbolo: "ㄷ", decir: "디귿" }, { simbolo: "ㄹ", decir: "리을" },
@@ -84,6 +94,7 @@ const SonidoApp = {
       { simbolo: "ㅗ", decir: "오" }, { simbolo: "ㅜ", decir: "우" }
     ],
 
+    // Números del 1 al 10 en coreano (sistema nativo)
     numeros: [
       { simbolo: "1", decir: "하나" }, { simbolo: "2", decir: "둘" },
       { simbolo: "3", decir: "셋" }, { simbolo: "4", decir: "넷" },
@@ -92,6 +103,7 @@ const SonidoApp = {
       { simbolo: "9", decir: "아홉" }, { simbolo: "10", decir: "열" }
     ],
 
+    // Palabras comunes en coreano
     palabras: [
       { simbolo: "고양이",decir: "고양이" },
       { simbolo: "개", decir: "개" },

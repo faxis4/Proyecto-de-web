@@ -102,6 +102,7 @@ header p span {
   color: #1A1B26;
 }
 
+/* Área principal del juego: botón play, temporizador, opciones y resultados */
 main {
   background: #232436;
   border-radius: 28px;
@@ -125,10 +126,12 @@ main {
   cursor: pointer;
 }
 
+/* Efecto hover del botón de reproducir */
 .botonReproducir:hover {
   transform: scale(1.04);
 }
 
+/* Texto de aviso para indicar que se está reproduciendo el audio */
 .Aviso {
   margin: 0;
   font-size: 0.8125rem;
@@ -166,16 +169,19 @@ main {
   word-break: break-word;
 }
 
+/* Efecto hover: resalta el borde de la opción */
 .opciones:hover {
   border-color: #9D7BFF;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(157,123,255,0.15);
 }
 
+/* Efecto al presionar una opción */
 .opciones:active {
   transform: translateY(0);
 }
 
+/* Opciones deshabilitadas después de responder */
 .opciones:disabled {
   cursor: default;
   opacity: 0.5;
@@ -183,6 +189,7 @@ main {
   box-shadow: none;
 }
 
+/* Opción correcta: se muestra en verde */
 .opciones.correcto {
   background: #4ade80;
   color: #1A1B26;
@@ -190,6 +197,7 @@ main {
   transform: scale(1.05);
 }
 
+/* Opción incorrecta: se muestra en rojo */
 .opciones.error {
   background: #ff4444;
   color: #fff;
@@ -206,13 +214,14 @@ main {
   color: #FF6B5B;
 }
 
+/* Puntaje acumulado en el footer */
 #validarPuntos {
   font-size: 1.125rem;
   font-weight: 700;
   color: #9D7BFF;
 }
 
-/* Pie de página: instrucción y puntaje total */
+/* Pie de página del juego: instrucción y puntaje total */
 footer {
   display: flex;
   align-items: center;
