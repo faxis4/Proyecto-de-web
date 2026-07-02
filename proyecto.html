@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="diseño.css">
+  <title>Mspotify — Aprende escuchando</title>
+</head>
+<body>
+  <!-- Página principal del juego: escuchar y seleccionar la opción correcta -->
+  <div class="app">
+    <!-- Contenedor principal de la aplicación de los idiomas -->
+    <header>
+      <h1>Mspotify</h1>
+
+      <nav>
+        <button class="idioma" value="español">ESPAÑOL</button>
+        <button class="idioma" value="ingles">ENGLISH</button>
+        <button class="idioma" value="coreano">한국어</button>
+      </nav>
+      <!-- Contador de racha de respuestas correctas -->
+      <p>Racha: <span id="racha">0</span></p>
+    </header>
+    <!-- Contenedor de los modos de juego: letras, números y palabras -->
+    <nav>
+      <button class="modo activo" value="letras">Letras</button>
+      <button class="modo" value="numeros">Números</button>
+      <button class="modo" value="palabras">Palabras</button>
+    </nav>
+    <!-- Contenedor de la sección principal del juego: botón de reproducir, opciones y resultados -->
+    <main>
+
+      <button class="botonReproducir">▶</button>
+      <p id="señalizacion">Toca para escuchar</p>
+      <p class="Aviso"></p>
+
+      <div id="Tiempo">
+        <span id="time">10</span>s
+      </div>
+
+      <p id="cartelResultado"></p>
+
+      <div class="opciones-botones">
+        <button class="opciones">A</button>
+        <button class="opciones">B</button>
+        <button class="opciones">C</button>
+        <button class="opciones">D</button>
+      </div>
+
+    </main>
+    <!-- Contenedor del puntaje y la instrucción de escuchar -->
+    <footer>
+      <p>Escucha con atención y elige la opción correcta</p>
+      <p>Puntos: <span id="validarPuntos">0</span></p>
+    </footer>
+  </div>
+  <!-- declaración de los scripts de la aplicación web con archivos externos de JavaScript -->
+  <script src="Sonido.js"></script>
+  <script src="funciones.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,338 @@
+/* ── Estilos base ── */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #1A1B26;
+  color: #F4F2ED;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+/* Contenedor principal de la aplicación del juego */
+.app {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* Encabezado: título, selector de idioma y contador de racha */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Título de la aplicación */
+h1 {
+  font-size: 1.375rem;
+  color: #9D7BFF;
+  margin: 0;
+}
+
+/* Selector de idioma dentro del header */
+header nav {
+  display: flex;
+  gap: 6px;
+  background: #232436;
+  padding: 4px;
+  border-radius: 999px;
+}
+
+header nav button {
+  border: none;
+  background: transparent;
+  color: #C9C7D6;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+header nav button:hover {
+  background: #9D7BFF;
+  color: #1A1B26;
+}
+
+/* Contador de racha en el header */
+header p {
+  background: #232436;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+header p span {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #9D7BFF;
+}
+
+/* Navegación de modos de juego: letras, números, palabras */
+.app > nav {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.app > nav button {
+  border: 1px solid #444;
+  background: #2A2C42;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 14px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #F4F2ED;
+}
+
+.app > nav button:hover {
+  background: #3B3D52;
+}
+
+.app > nav button.activo {
+  background: #ffffff;
+  color: #1A1B26;
+}
+
+main {
+  background: #232436;
+  border-radius: 28px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Botón circular para reproducir el audio de la pregunta */
+.botonReproducir {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: none;
+  background: #9D7BFF;
+  color: #1A1B26;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.botonReproducir:hover {
+  transform: scale(1.04);
+}
+
+.Aviso {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #C9C7D6;
+}
+
+/* Mensaje de resultado */
+#cartelResultado {
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+/* Contenedor de botones de respuesta */
+.opciones-botones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+
+/* Botones con las opciones de respuesta (A, B, C, D) */
+.opciones {
+  background: #2A2C42;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  padding: 28px 16px;
+  cursor: pointer;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #F4F2ED;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  word-break: break-word;
+}
+
+.opciones:hover {
+  border-color: #9D7BFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(157,123,255,0.15);
+}
+
+.opciones:active {
+  transform: translateY(0);
+}
+
+.opciones:disabled {
+  cursor: default;
+  opacity: 0.5;
+  transform: none;
+  box-shadow: none;
+}
+
+.opciones.correcto {
+  background: #4ade80;
+  color: #1A1B26;
+  border-color: #4ade80;
+  transform: scale(1.05);
+}
+
+.opciones.error {
+  background: #ff4444;
+  color: #fff;
+  border-color: #ff4444;
+}
+
+/* Temporizador: cuenta regresiva de cada ronda, se pone rojo cuando quedan 3s */
+#time {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#Tiempo.alerta-tiempo {
+  color: #FF6B5B;
+}
+
+#validarPuntos {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #9D7BFF;
+}
+
+/* Pie de página: instrucción y puntaje total */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #C9C7D6;
+}
+
+footer p:last-child {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #F4F2ED;
+}
+
+/* ── Landing page (Principal.html) ── */
+
+/* Encabezado con la imagen del gato */
+header .contenedor {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-de-gato {
+  position: relative;
+  width: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+.Gato-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.Gato-texto {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 32px 24px;
+  text-align: center;
+  gap: 12px;
+}
+
+.Gato-texto h1 {
+  font-size: 1.75rem;
+  color: #F4F2ED;
+  margin: 0;
+}
+
+/* Sección principal con la descripción y el botón */
+main .contenedor {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 16px;
+  gap: 16px;
+}
+
+main .contenedor p {
+  font-size: 0.95rem;
+  color: #C9C7D6;
+  margin: 0;
+  max-width: 320px;
+}
+
+.Gato-btn {
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 36px;
+  cursor: pointer;
+  margin-top: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-comenzar {
+  background: #9D7BFF;
+  color: #F4F2ED;
+}
+
+.btn-comenzar:hover {
+  background: #b89eff;
+  transform: scale(1.03);
+}
+
+/* Pie de página */
+footer .contenedor {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+footer .contenedor p {
+  font-size: 0.75rem;
+  color: #C9C7D6;
+  margin: 0;
+}

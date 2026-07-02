@@ -1,0 +1,75 @@
+DOCUMENTACIÓN DEL PROYECTO — Mspotify
+====================================
+
+1. DESCRIPCIÓN DEL PROYECTO
+---------------------------
+Mspotify es una aplicación web educativa para aprender idiomas
+escuchando. El usuario escucha la pronunciación de una letra, número
+o palabra en el idioma seleccionado y debe elegir la opción correcta
+entre cuatro alternativas.
+
+La app incluye:
+- Tres idiomas: español, inglés y coreano.
+- Tres modos de juego: letras, números y palabras.
+- Temporizador de 10 segundos por ronda.
+- Sistema de puntuación (10 puntos por acierto) y racha de respuestas
+  correctas consecutivas.
+- Feedback visual y auditivo inmediato (correcto/incorrecto).
+
+Flujo del usuario:
+  1. Página de bienvenida (Principal.html) con botón "Comenzar ahora".
+  2. Página del juego (proyecto.html) donde selecciona idioma y modo,
+     escucha el audio y elige una respuesta.
+
+2. TECNOLOGÍAS UTILIZADAS
+--------------------------
+- HTML5: estructura semántica con <header>, <nav>, <main> y <footer>.
+- CSS3: estilos externos en diseño.css, diseño responsivo con Flexbox
+  y Grid, paleta oscura con acentos en púrpura (#9D7BFF).
+- JavaScript (ES6): lógica del juego, manipulación del DOM y síntesis
+  de voz nativa del navegador (Web Speech API - SpeechSynthesis).
+- Web Speech API: para la lectura en voz alta de las letras, números
+  y palabras en los distintos idiomas sin depender de archivos de
+  audio externos.
+
+Archivos del proyecto:
+  - Principal.html     → Landing page de bienvenida
+  - proyecto.html       → Página principal del juego
+  - diseño.css          → Todos los estilos de la aplicación
+  - Sonido.js           → Datos de contenido por idioma y modo
+  - funciones.js        → Lógica del juego, puntuación y temporizador
+  - Gato.jpg            → Imagen decorativa de la landing page
+
+3. DECISIONES DE DISEÑO IMPORTANTES
+------------------------------------
+a) Paleta oscura con acentos vibrantes:
+   Se eligió un fondo oscuro (#1A1B26) con detalles en púrpura
+   (#9D7BFF) para reducir la fatiga visual y dar un aspecto moderno,
+   similar a aplicaciones como Spotify o Duolingo.
+
+b) Web Speech API en lugar de archivos de audio:
+   Se usa la voz sintética del navegador para reproducir las
+   preguntas. Esto evita tener que grabar y gestionar decenas de
+   archivos .mp3, y permite que el navegador use voces nativas en
+   cada idioma automáticamente.
+
+c) Diseño mobile-first:
+   La app está pensada para usarse en celulares. Se usan unidades
+   relativas (rem, %, vh) y layouts flexibles (Flexbox + Grid) para
+   adaptarse a distintos tamaños de pantalla.
+
+d) Opciones siempre 4 y aleatorias:
+   Cada ronda muestra exactamente 4 opciones seleccionadas al azar
+   del conjunto de datos del idioma/modo activo. La respuesta correcta
+   se coloca en una posición aleatoria para evitar patrones.
+
+e) Feedback inmediato con colores y voz:
+   Al responder, el botón se pone verde (correcto) o rojo (error),
+   se marca visualmente la respuesta correcta, y el navegador dice
+   "Correcto" o "Incorrecto" en voz alta. El temporizador se pone
+   rojo cuando quedan 3 segundos.
+
+f) Racha como motivación:
+   Además del puntaje acumulado, se muestra una racha de respuestas
+   correctas consecutivas que se reinicia al fallar o al agotarse
+   el tiempo, fomentando la concentración del usuario.
